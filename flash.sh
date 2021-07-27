@@ -3,7 +3,7 @@
 set -e 
 
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
-    echo "usage: $0 /home/jakobwaibel/Documents/Projects/learning-rust/rust-arduino-blink/target/avr-atmega328p/debug/avr-rs.elf" >&2
+    echo "usage: $0 target/avr-atmega328p/debug/avr-rs.elf" >&2
     exit 1
 fi
 

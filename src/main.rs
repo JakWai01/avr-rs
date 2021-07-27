@@ -1,7 +1,6 @@
 #![no_std]
 #![no_main]
 
-// If we don't have panic_halt, panicking behaviour is undefined without the stdlib
 extern crate panic_halt;
 use arduino_uno::hal::port::mode::Output;
 use arduino_uno::hal::port::portb::PB5;

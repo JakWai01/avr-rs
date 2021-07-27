@@ -1,9 +1,12 @@
-FROM ubuntu:20.10
+FROM rust:1.31
 
 RUN apt update 
 
+RUN apt-get install -y \
+    build-essential \
+    curl
+RUN apt-get install avra avrdude -y
 RUN apt install git -y
-RUN apt install build-essential -y
 RUN git clone https://github.com/JakWai01/avr-rs.git
 RUN cd avr-rs
-RUN make run
+RUN make run 

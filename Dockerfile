@@ -9,4 +9,4 @@ RUN apt-get install avra avrdude -y
 RUN apt install git -y
 RUN git clone https://github.com/JakWai01/avr-rs.git
 RUN cd avr-rs
-RUN make run 
+CMD make run

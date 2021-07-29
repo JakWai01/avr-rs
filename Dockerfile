@@ -8,6 +8,10 @@ RUN apt-get install -y \
 RUN apt-get update -y && apt-get install -y wget gcc binutils gcc-avr avr-libc
 RUN apt-get install avra avrdude -y
 RUN apt install git -y
-# RUN git clone https://github.com/JakWai01/avr-rs.git
+RUN rustup toolchain install nightly-2021-01-07
+RUN rustup override set nightly-2021-01-07
+RUN rustup component add rust-src
 COPY . avr-rs
-CMD cd avr-rs; make run
+WORKDIR /avr-rs
+RUN cargo build -Z build-std=core --target avr-atmega328p.json --verbose
+CMD sh ./flash.sh target/avr-atmega328p/debug/avr-rs.elf

@@ -1,12 +1,10 @@
-build:
-	rustup toolchain install nightly-2021-01-07
-	rustup override set nightly-2021-01-07
-	rustup component add rust-src
-	cargo build -Z build-std=core --target avr-atmega328p.json --verbose
+run:
+	docker build -t avr-rs:v1 .
+	docker run --device=/dev/ttyACM0 avr-rs:v1
 
-run: 
-	rustup toolchain install nightly-2021-01-07
-	rustup override set nightly-2021-01-07
-	rustup component add rust-src
-	cargo build -Z build-std=core --target avr-atmega328p.json --verbose
-	sh ./flash.sh target/avr-atmega328p/debug/avr-rs.elf
+build:
+	docker build -t avr-rs:v1
+
+clean: 
+	docker build --no-cache -t avr-rs:v1 .
+	docker run --device=/dev/ttyACM0 avr-rs:v1

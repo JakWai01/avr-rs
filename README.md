@@ -43,7 +43,7 @@ Copy the code of the `blink.rs` file into `main.rs` and run `make clean`.
 The second example requires an Arduino Uno, 2 cables, an LED and a 220 Ohm resistor.
 Assemble the components like displayed in the graphic below.
 
-![led](/assets/led.png)
+![led](/assets/led_example.png)
 
 Again, plug in the Arduino, copy the code out of the `led.rs` file into `main.rs` and run `make clean`.
 

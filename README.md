@@ -2,7 +2,7 @@
 
 ## Overview
 
-avr-rs is a repository to teach how to write code in Rust for the Arduino Uno and provides the necessary toolchain to flash your Arduino after writing said code with ease and out of a Docker container.
+A repository to teach how to write code in Rust targeting the Arduino Uno by providing the necessary toolchain to flash the Arduino and some useful examples.
 
 ## Usage
 

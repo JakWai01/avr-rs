@@ -6,6 +6,8 @@ edition = "2018"
 
 [dependencies]
 panic-halt = "0.2.0"
+ruduino = "0.3"
+avr-config = "2.0.1"
 
 [dependencies.arduino-uno]
 git = "https://github.com/Rahix/avr-hal"

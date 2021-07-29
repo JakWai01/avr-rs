@@ -20,6 +20,7 @@ COPY . avr-rs
 WORKDIR /avr-rs
 
 # Compile main.rs
+ENV AVR_CPU_FREQUENCY_HZ=16000000
 RUN cargo build -Z build-std=core --target avr-atmega328p.json --verbose
 
 # Flash on Arduino Uno

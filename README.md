@@ -29,9 +29,23 @@ inside of the `avr-rs` folder.
 ```
 To solve this issue, please make sure your Arduino is plugged in correctly into your computer.
 
-### Learning (work in progress)
+### Learning
 
 To learn the basic concepts of writing code for the Arduino in Rust, you may want to follow the well-documented examples in the `examples` folder. To run the examples, just paste them into the main.rs and execute `make clean` again.
+
+#### 1. Blink
+
+The first example just requires the Arduino Uno itself. Plug it in and your ready to go. 
+Copy the code of the `blink.rs` file into `main.rs` and run `make clean`. 
+
+#### 2. LED 
+
+The second example requires an Arduino Uno, 2 cables, an LED and a 220 Ohm resistor.
+Assemble the components like displayed in the graphic below.
+
+![led](/assets/led.png)
+
+Again, plug in the Arduino, copy the code out of the `led.rs` file into `main.rs` and run `make clean`.
 
 ## Acknowledgements
 
